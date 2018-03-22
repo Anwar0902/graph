@@ -12,6 +12,13 @@ card = %CreditCard{
 
 amount = Money.new(100, :GBP)
 
+address = %{
+  address1: "407 St. John Street",
+  city: "London",
+  postalCode: "EC1V 4AB",
+  country: "GB"
+}
+
 opts = [
   config: %{
     auth_id:
@@ -19,14 +26,9 @@ opts = [
     vendor: "sandbox"
   },
   transactionType: "Deferred",
-  vendorTxCode: "demotransaction-51",
+  vendorTxCode: "demotransaction-71",
   description: "Demo Payment",
   customerFirstName: "Sam",
   customerLastName: "Jones",
-  billingAddress: %{
-    address1: "407 St. John Street",
-    city: "London",
-    postalCode: "EC1V 4AB",
-    country: "GB"
-  }
+  billingAddress: address
 ]
